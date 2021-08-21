@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf=8">
+  <style>
+    body{
+      display:flex;
+      align-items:center;
+      text-align:center;
+      justify-content:center;
+    }
+    .container{
+      display:flex;
+      text-align:center;
+      flex-direction:column;
+      width:800px;
+      /* border:1px solid gray; */
+    }
+    header{
+      /* border-bottom:1px solid gray; */
+      padding-left:20px;
+      text-align: center;
+    }
+    footer{
+      /* border-top:1px solid gray; */
+      padding:20px;
+      text-align: center;
+    }
+    .content{
+      display:flex;
+    }
+    main{
+      padding:20px;
+      text-align:center;
+      display : block;
+      margin : auto;
+    }
+    #poster{
+      border : 8px dashed black;
+    }
+    nav, aside{
+      flex-basis: 150px;
+      flex-shrink:0;
+      text-align:center;
+      display : block;
+      margin : auto;
+      /* main만 줄어듬 */
+    }
+    nav{
+        order:-1;
+      }
+  </style>
+</head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>exhibition</h1>
+      </header>
+    <section class="content">
+      <main>
+        <div id="poster">
+        <img src="../exhibition/img/rgbh.png" height="500"> <br>
+      </div>
+        helloworldqqq님의 사c진전
+        <p>
+      </main>
+      <nav>
+        <img src="../exhibition/img/free-icon-left-arrow-271220.png" width="50" height="50">
+      </nav>
+      <aside>
+        <img src="../exhibition/img/free-icon-right-arrow-271228.png" width="50" height="50">
+      </aside>
+    </section>
+      <footer>
+        <h3>aboudst us.why..why..sdsd.ewwqesasaas.assaas...</h3>
+      </footer>
+    </div>
+  </body>
+</html>
