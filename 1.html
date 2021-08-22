@@ -72,14 +72,25 @@
     .btm_image:hover{
       transform : scale(1.4);
     }
+    .album{
+      width: 438px;
+      height: 500px;
+      overflow: hidden;
+    }
+    .images{
+      position: relative;
+      display: flex;
+      height: 500px;
+    }
   </style>
 </head>
+<!--
 <script type="text/javascript">
 function toggleImg(){
   document.getElementById("poster").src="../exhibition/img/rgbh2.png";
   document.getElementById("name").innerHTML = "Y님의 사진전";
 }
-
+-->
 </script>
   <body>
     <div class="container">
@@ -89,22 +100,28 @@ function toggleImg(){
     <section class="content">
       <main>
       <div>
-        <a href="../exhibition/2.html">
-        <img id="poster" src="../exhibition/img/rgbh1.png" height="500">
-      </a>
+        <div class="album">
+          <div class="images">
+            <img id="poster1" src="../exhibition/img/rgbh1.png" height="500">
+            <img id="poster2" src="../exhibition/img/rgbh2.png" height="500">
+            
+          </div>
+        </div>
         <br>
       </div>
         <p id="name"> X님의 사진전 </p>
       </main>
       <nav>
-        <button onclick="toggleImg()" class="btm_image" id="leftb">
-        <img src="../exhibition/img/free-icon-left-arrow-271220.png"
-        width="50" height="50"></button>
+        <button class="leftb" id="leftb">
+          <img src="../exhibition/img/free-icon-left-arrow-271220.png"
+          width="50" height="50">
+        </button>
       </nav>
       <aside>
-        <button onclick="toggleImg()" class="btm_image" id="rightb">
-        <img src="../exhibition/img/free-icon-right-arrow-271228.png"
-        width="50" height="50"></button>
+        <button class="rightb" id="rightb">
+          <img src="../exhibition/img/free-icon-right-arrow-271228.png"
+          width="50" height="50">
+        </button>
       </aside>
     </section>
       <footer>
