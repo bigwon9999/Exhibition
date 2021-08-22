@@ -27,11 +27,11 @@ function next(){
     rightBtn.setAttribute('disabled', 'true')
   }
 }
- 
+
 function init(){
     leftBtn.setAttribute('disabled', 'true')
     leftBtn.addEventListener("click", prev)
     rightBtn.addEventListener("click", next)
 }
- 
+
 init();
