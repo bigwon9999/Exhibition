@@ -3,6 +3,18 @@
 <head>
   <meta charset="utf=8">
   <style>
+  #poster{
+    transition: all 1s;
+    /* 모든 효과에 대해서 1초동안 부드럽게 전환 */
+  }
+  #poster:hover{
+    -webkit-filter: invert(100%);
+    /* 벤더프리픽스 크롬,사파리 */
+    -o-filter:  invert(100%);
+    /* 벤더프리픽스 오페라 */
+    filter:  invert(100%);
+    /* 모든 웹브라우저 */
+  }
     body{
       display:flex;
       align-items:center;
@@ -36,7 +48,7 @@
       margin : auto;
     }
     #poster{
-      border : 8px dashed black;
+      border : 3px solid black;
     }
     nav, aside{
       flex-basis: 150px;
@@ -47,10 +59,28 @@
       /* main만 줄어듬 */
     }
     nav{
-        order:-1;
-      }
+      order:-1;
+    }
+    button{
+      border:0;
+      outline:0;
+      background-color:white;
+    }
+    .btm_image{
+      transition: all 1s;
+    }
+    .btm_image:hover{
+      transform : scale(1.4);
+    }
   </style>
 </head>
+<script type="text/javascript">
+function toggleImg(){
+  document.getElementById("poster").src="../exhibition/img/rgbh2.png";
+  document.getElementById("name").innerHTML = "Y님의 사진전";
+}
+
+</script>
   <body>
     <div class="container">
       <header>
@@ -58,21 +88,26 @@
       </header>
     <section class="content">
       <main>
-        <div id="poster">
-        <img src="../exhibition/img/rgbh.png" height="500"> <br>
+      <div>
+        <!-- <div onclick="toggleImg"> -->
+        <img id="poster" src="../exhibition/img/rgbh1.png" height="500">
+        <br>
       </div>
-        helloworldqqq님의 사c진전
-        <p>
+        <p id="name"> X님의 사진전 </p>
       </main>
       <nav>
-        <img src="../exhibition/img/free-icon-left-arrow-271220.png" width="50" height="50">
+        <button onclick="toggleImg()" class="btm_image" id="leftb">
+        <img src="../exhibition/img/free-icon-left-arrow-271220.png"
+        width="50" height="50"></button>
       </nav>
       <aside>
-        <img src="../exhibition/img/free-icon-right-arrow-271228.png" width="50" height="50">
+        <button onclick="toggleImg()" class="btm_image" id="rightb">
+        <img src="../exhibition/img/free-icon-right-arrow-271228.png"
+        width="50" height="50"></button>
       </aside>
     </section>
       <footer>
-        <h3>aboudst us.why..why..sdsd.ewwqesasaas.assaas...</h3>
+        <h3>aboudst us.why...</h3>
       </footer>
     </div>
   </body>
